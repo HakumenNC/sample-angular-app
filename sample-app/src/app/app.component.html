@@ -1,0 +1,65 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs m-3">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Page principale</a>
+    <ng-template ngbNavContent>
+      <!-- --------------------------------------------------------------------------- -->
+
+      <ul>
+        <li *ngFor="let user of users; index as i">
+          {{ user.firstName + " " + user.name + " " + user.birthDate + " " + user.points}}
+        </li>
+      </ul>
+
+      <!-- --------------------------------------------------------------------------- -->
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>Tableau</a>
+    <ng-template ngbNavContent>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>entete 1</th>
+          <th>entete 2</th>
+          <th>entete 3</th>
+          <th>entete 4</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Ligne 1 colonne 1</td>
+          <td>Ligne 1 colonne 2</td>
+          <td>Ligne 1 colonne 3</td>
+          <td>Ligne 1 colonne 4</td>
+        </tr>
+        <tr>
+          <td>Ligne 2 colonne 1</td>
+          <td>Ligne 2 colonne 2</td>
+          <td>Ligne 2 colonne 3</td>
+          <td>Ligne 2 colonne 4</td>
+        </tr>
+        <tr>
+          <td>Ligne 3 colonne 1</td>
+          <td>Ligne 3 colonne 2</td>
+          <td>Ligne 3 colonne 3</td>
+          <td>Ligne 3 colonne 4</td>
+        </tr>
+        </tbody>
+      </table>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink>Icones</a>
+    <ng-template ngbNavContent>
+
+      <fa-icon style="color:gray" [icon]="faUser"></fa-icon>
+      <fa-icon [icon]="faUserCircle"></fa-icon>
+      <fa-icon [icon]="faCalendar"></fa-icon>
+      <fa-icon [icon]="faCalendarAlt"></fa-icon>
+      <fa-icon style="color:orangered" [icon]="faStar"></fa-icon>
+
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="m-3"></div>
