@@ -3,12 +3,18 @@
     <a ngbNavLink>Page principale</a>
     <ng-template ngbNavContent>
       <!-- --------------------------------------------------------------------------- -->
+      <!-- PAGE PRINCIPALE -->
+      <!-- --------------------------------------------------------------------------- -->
+
+
 
       <ul>
         <li *ngFor="let user of users; index as i">
           {{ user.firstName + " " + user.name + " " + user.birthDate + " " + user.points}}
         </li>
       </ul>
+
+
 
       <!-- --------------------------------------------------------------------------- -->
     </ng-template>
@@ -17,6 +23,9 @@
     <a ngbNavLink>Tableau</a>
     <ng-template ngbNavContent>
       <!-- --------------------------------------------------------------------------- -->
+      <!-- TABLEAU -->
+      <!-- --------------------------------------------------------------------------- -->
+
 
       <table class="table table-striped">
         <thead>
@@ -30,7 +39,7 @@
         <tbody>
         <tr>
           <td>Ligne 1 colonne 1</td>
-          <td>Ligne 1 colonne 2</td>
+          <td style="background-color: aqua">Ligne 1 colonne 2</td>
           <td>Ligne 1 colonne 3</td>
           <td>Ligne 1 colonne 4</td>
         </tr>
@@ -43,11 +52,12 @@
         <tr>
           <td>Ligne 3 colonne 1</td>
           <td>Ligne 3 colonne 2</td>
-          <td>Ligne 3 colonne 3</td>
+          <td style="background-color: coral">Ligne 3 colonne 3</td>
           <td>Ligne 3 colonne 4</td>
         </tr>
         </tbody>
       </table>
+
 
       <!-- --------------------------------------------------------------------------- -->
     </ng-template>
@@ -56,6 +66,9 @@
     <a ngbNavLink>Icones</a>
     <ng-template ngbNavContent>
       <!-- --------------------------------------------------------------------------- -->
+      <!-- ICONES -->
+      <!-- --------------------------------------------------------------------------- -->
+
 
       <fa-icon style="color:gray" [icon]="faUser"></fa-icon>
       <fa-icon [icon]="faUserCircle"></fa-icon>
@@ -70,6 +83,9 @@
     <a ngbNavLink>Popover</a>
     <ng-template ngbNavContent>
       <!-- --------------------------------------------------------------------------- -->
+      <!-- POPOVER -->
+      <!-- --------------------------------------------------------------------------- -->
+
 
       <button type="button" class="btn btn-outline-primary mr-2" placement="top"
               ngbPopover="Texte ou élément" popoverTitle="Example">
@@ -83,31 +99,27 @@
     <a ngbNavLink>Card</a>
     <ng-template ngbNavContent>
       <!-- --------------------------------------------------------------------------- -->
-
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-      </div>
-
-      <div class="card my-2">
-        <div class="card-header">
-          Featured
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+      <!-- CARDS -->
+      <!-- --------------------------------------------------------------------------- -->
+      <div class="container">
+        <div class="row row-cols-2 row-cols-lg-5 g-1 g-lg-2">
+          <div class="col">
+            <div class="card" style="width: 200px">
+              <img src="https://randomuser.me/api/portraits/women/36.jpg" height="200px" width="200px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Détails</a>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-
       <!-- --------------------------------------------------------------------------- -->
     </ng-template>
   </li>
